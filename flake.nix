@@ -8,11 +8,15 @@
     let
       system = "x86_64-linux";
       pkgs = nixpkgs.legacyPackages.${system};
+
+      thePackagesOfDoom = final: {
+        test-ripley-repo-install = final.callPackage ./pkgs/test-ripley-repo-install.nix { };
+      };
+
     in
     {
-      packages.${system} = {
-        test-ripley-repo-install = pkgs.callPackage ./pkgs/my-script.nix { };
-      };
+      packages.${system} = thePackagesOfDoom pkgs;
+      overlays.default = final: prev: thePackagesOfDoom final;
 
       # for later me lol
       # nixosModules.default = import ./modules/example.nix;
