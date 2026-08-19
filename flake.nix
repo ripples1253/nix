@@ -10,7 +10,7 @@
       pkgs = nixpkgs.legacyPackages.${system};
 
       thePackagesOfDoom = final: {
-        test-ripley-repo-install = final.callPackage ./pkgs/test-ripley-repo-install.nix { };
+        test-shared-repo-install = final.callPackage ./pkgs/test-shared-repo-install.nix { };
       };
 
     in
