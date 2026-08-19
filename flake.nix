@@ -1,5 +1,5 @@
 {
-  description = "the packages that i made or something idk";
+  description = "ripley & theo's nix packages";
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
