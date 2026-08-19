@@ -7,7 +7,7 @@
 ```nix
 inputs = {
   rip-and-theo-repo = {
-    url = "github:ripples1253/nix-repo";
+    url = "github:ripples1253/nix";
     inputs.nixpkgs.follows = "nixpkgs";
   };
 }
